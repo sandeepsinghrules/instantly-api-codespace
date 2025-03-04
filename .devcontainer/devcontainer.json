@@ -1,0 +1,11 @@
+{
+  "name": "InstantlyApi",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:16",
+  "postCreateCommand": "apt-get update && apt-get install -y python2 python2.7 && ln -s /usr/bin/python2.7 /usr/bin/python && npm config set python python2.7 && npm rebuild node-sass && npm install",
+  "customizations": {
+    "vscode": {
+      "extensions": ["octref.vetur", "esbenp.prettier-vscode"]
+    }
+  },
+  "remoteUser": "vscode"
+}
