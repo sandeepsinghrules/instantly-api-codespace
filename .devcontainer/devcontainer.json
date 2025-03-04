@@ -6,7 +6,7 @@
       "version": "3.12"
     }
   },
-  "postCreateCommand": "/bin/bash -c 'ln -sf /usr/local/python/2.7.18/bin/python /usr/bin/python2; npm config set python /usr/bin/python2; npm install -g npm@8.19.4 node-gyp@latest; npm install --force; npm rebuild node-sass'",
+  "postCreateCommand": "npm config set python 3.12; npm install -g npm@8.19.4 node-gyp@latest; npm install --force; npm rebuild node-sass'",
   "customizations": {
     "vscode": {
       "extensions": ["octref.vetur", "esbenp.prettier-vscode"]
