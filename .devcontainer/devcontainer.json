@@ -1,12 +1,12 @@
 {
-  "name": "Vue.js 2 with Latest Node & Python",
-  "image": "mcr.microsoft.com/devcontainers/javascript-node:latest",
+  "name": "Vue.js 2 with Node 16 & Python 3.12",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:16",
   "features": {
     "ghcr.io/devcontainers/features/python:1": {
-      "version": "latest"
+      "version": "3.12"
     }
   },
-  "postCreateCommand": "npm config set python $(which python); npm install -g npm@latest; npm install --force; npm rebuild node-sass",
+  "postCreateCommand": "/bin/bash -c 'ln -sf /usr/local/python/2.7.18/bin/python /usr/bin/python2; npm config set python /usr/bin/python2; npm install -g npm@8.19.4 node-gyp@latest; npm install --force; npm rebuild node-sass'",
   "customizations": {
     "vscode": {
       "extensions": ["octref.vetur", "esbenp.prettier-vscode"]
