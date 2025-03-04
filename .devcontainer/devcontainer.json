@@ -1,7 +1,12 @@
 {
-  "name": "InstantlyApi",
+  "name": "Vue.js 2 with Node 16 & Python 2.7",
   "image": "mcr.microsoft.com/devcontainers/javascript-node:16",
-  "postCreateCommand": "apt-get update && apt-get install -y python2 python2.7 && ln -s /usr/bin/python2.7 /usr/bin/python && npm config set python python2.7 && npm rebuild node-sass && npm install",
+  "features": {
+    "ghcr.io/devcontainers/features/python:1": {
+      "version": "2.7"
+    }
+  },
+  "postCreateCommand": "npm config set python /usr/bin/python2.7 && npm rebuild node-sass && npm install",
   "customizations": {
     "vscode": {
       "extensions": ["octref.vetur", "esbenp.prettier-vscode"]
